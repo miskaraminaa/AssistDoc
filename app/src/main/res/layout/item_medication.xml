@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Using a TextView as an icon -->
+    <TextView
+        android:id="@+id/textMedIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="💊"
+        android:textSize="24sp"
+        android:layout_marginEnd="12dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textViewNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medication Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/textViewHeurePris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time of Intake"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/textViewFrequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequency"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/textViewDosage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dosage"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+</LinearLayout>

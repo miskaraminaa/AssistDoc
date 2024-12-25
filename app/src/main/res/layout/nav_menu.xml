@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home" android:title="Home" />
+    <item android:id="@+id/profile" android:title="Profile" />
+    <item android:id="@+id/slots" android:title="Slots" />
+    <item android:id="@+id/appointment" android:title="Appointments" />
+    <item android:id="@+id/chats" android:title="Chats" />
+    <item android:id="@+id/settingsApp" android:title="Settings" />
+    <item android:id="@+id/logout" android:title="Logout" />
+</menu>
