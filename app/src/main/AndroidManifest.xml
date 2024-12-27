@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Medications_Add" />
+        <activity android:name=".patient.Medications_Add" />
         <activity
             android:name=".patient.ActivityContactUs"
             android:theme="@style/home_theme" />

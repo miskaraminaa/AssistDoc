@@ -22,7 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import ma.ensa.www.assistdoc.Activity_SignIn;
 import ma.ensa.www.assistdoc.Chat_Activity;
-import ma.ensa.www.assistdoc.Medications_Add;
 import ma.ensa.www.assistdoc.R;
 import ma.ensa.www.assistdoc.chatbot.MainActivity;
 

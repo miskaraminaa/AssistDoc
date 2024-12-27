@@ -1,4 +1,4 @@
-package ma.ensa.www.assistdoc;
+package ma.ensa.www.assistdoc.patient;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -20,9 +20,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
+import ma.ensa.www.assistdoc.Chat_Activity;
+import ma.ensa.www.assistdoc.R;
 import ma.ensa.www.assistdoc.entities.Medicament;
 import ma.ensa.www.assistdoc.model.MedicationReminderReceiver;
-import ma.ensa.www.assistdoc.patient.Medications_Activity;
 
 public class Medications_Add extends AppCompatActivity {
     private EditText editNom, editDosage, editFrequence, editHeurePris;
