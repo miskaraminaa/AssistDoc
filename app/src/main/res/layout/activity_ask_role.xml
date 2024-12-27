@@ -24,7 +24,7 @@
         android:layout_marginTop="44dp"
         android:text="Who is using the app?"
         android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textSize="52sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,11 +46,11 @@
 
     <ImageView
         android:id="@+id/doctorLogin"
-        android:layout_width="402dp"
-        android:layout_height="510dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="336dp"
+        android:layout_height="409dp"
+        android:layout_marginTop="124dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view1"
         app:srcCompat="@drawable/role" />
@@ -62,24 +62,25 @@
         android:background="@drawable/bordermain"
         android:text="@string/AskRole_doctor"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@id/doctorLogin"
         app:layout_constraintEnd_toEndOf="@id/doctorLogin"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/doctorLogin" />
 
     <TextView
         android:id="@+id/PatienttextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bordermain"
         android:text="@string/AskRole_patient"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@id/doctorLogin"
-        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/doctorLogin"
         app:layout_constraintTop_toBottomOf="@id/doctorLogin" />
 

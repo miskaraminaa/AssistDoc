@@ -37,6 +37,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="No"
+            android:textColor="@color/black"
             android:backgroundTint="@color/white"/>
 
         <Button
@@ -46,6 +47,7 @@
             android:layout_margin="13dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="@color/black"
             android:text="Yes"
             android:backgroundTint="@color/white"/>
 

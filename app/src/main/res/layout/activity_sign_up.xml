@@ -7,6 +7,7 @@
     android:background="#FFFF">
 
 
+
     <ImageView
         android:id="@+id/topBackground"
         android:layout_width="0dp"
@@ -22,12 +23,12 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="81dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="98dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/rb_198"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/topBackground" />
 
@@ -36,12 +37,13 @@
         android:layout_width="122dp"
         android:layout_height="71dp"
         android:src="@drawable/ic_camera"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.198" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -51,7 +53,7 @@
         android:textSize="24sp"
         android:fontFamily="sans-serif"
         android:textStyle="italic|bold"
-        android:textColor="#7D32A8"
+        android:textColor="@color/darkPurple"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/profilerg0"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +69,7 @@
         android:gravity="center"
         android:hint="Username"
         android:padding="12dp"
-        android:textColor="#7D32A8"
+        android:textColor="@color/purple"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/email_reg"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
@@ -150,7 +152,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#7D32A8"
+        android:backgroundTint="@color/darkPurple"
         android:text="Register"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

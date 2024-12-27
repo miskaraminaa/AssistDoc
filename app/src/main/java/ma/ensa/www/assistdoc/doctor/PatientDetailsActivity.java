@@ -177,7 +177,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
         rc_rdv.setAdapter(adapter);
     }
 
-    @SuppressLint("QueryPermissionsNeeded")
+    @SuppressLint("QueryPermiswsionsNeeded")
     private void sendEmail() {
         // Email details
         String[] recipients = {reciverEmail}; // Replace with actual recipient email(s)

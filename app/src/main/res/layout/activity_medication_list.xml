@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#EAEAEA">
+    android:background="@color/lightPurple">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,17 +42,12 @@
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List of Medications"
+            android:text="Your Medications"
             android:textColor="#333333"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🧪"
-            android:textSize="34sp"
-            android:layout_marginStart="8dp" />
+
     </LinearLayout>
 
     <SearchView

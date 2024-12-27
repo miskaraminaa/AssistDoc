@@ -5,7 +5,7 @@
     android:background="@color/purple"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home" >
+    tools:context=".Splash_Activity" >
 
     <ImageView
         android:id="@+id/imageVieww"

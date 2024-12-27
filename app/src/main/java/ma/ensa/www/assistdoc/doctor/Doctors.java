@@ -27,7 +27,6 @@ import java.util.ArrayList;
 
 import ma.ensa.www.assistdoc.Chat_Activity;
 import ma.ensa.www.assistdoc.R;
-import ma.ensa.www.assistdoc.SignIn_Doctor;
 import ma.ensa.www.assistdoc.adapter.UserAdapter;
 import ma.ensa.www.assistdoc.model.Users;
 

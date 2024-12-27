@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/assistant/baseline_assistant_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/chat_bubble_outline/baseline_chat_bubble_outline_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_assistant_24" />
+                            <entry key="outputName" value="chat_bubble" />
                             <entry key="sourceFile" value="C:\Users\Administrateur\Documents\2ite2\Dev mobile\PFM\assistDoc\AssitDoc" />
                           </map>
                         </option>

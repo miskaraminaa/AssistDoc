@@ -4,47 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple">
+    android:background="@color/white">
 
-    <LinearLayout
+
+
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBar"
-        android:layout_width="10dp"
-        android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="-12dp"
-        android:layout_marginLeft="-12dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:background="@color/purple"
-        android:gravity="right">
-
-
-        <TextView
-            android:layout_width="216dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="Assist Doc Chat"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="40dp"
-            android:textStyle="bold|italic" />
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkPurple"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:elevation="4dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/logoutimg"
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/logout_icon"
-            android:transitionName="loout_img" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:padding="8dp"
+            android:src="@drawable/logout_icon"
+            app:tint="@android:color/white" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainUserRecyclerView"
@@ -71,6 +54,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="232dp"
+        android:visibility="invisible"
         android:layout_marginRight="232dp"
         android:layout_marginBottom="37dp"
         android:src="@drawable/ic_camera" />
@@ -82,6 +66,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="99dp"
+        android:visibility="invisible"
         android:layout_marginRight="99dp"
         android:layout_marginBottom="36dp"
         android:src="@drawable/ic_chat" />
