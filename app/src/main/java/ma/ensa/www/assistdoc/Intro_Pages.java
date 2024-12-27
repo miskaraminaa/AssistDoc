@@ -72,30 +72,30 @@ public class Intro_Pages extends AppCompatActivity {
         mList.add(new ScreenItem(
                 "Welcome to Assist Doc",
                 "Hello and welcome! Assist Doc is your companion for streamlined healthcare management. Explore the app to see how we make healthcare more accessible.",
-                R.drawable.welcome2
+                R.drawable.welcome
         ));
 
         mList.add(new ScreenItem(
                 "For Doctors",
                 "As a doctor, you play a crucial role. Contact the administration to create your account and access tools designed to manage your practice efficiently.",
-                R.drawable.img2
+                R.drawable.image1
         ));
 
         mList.add(new ScreenItem(
                 "For Patients",
                 "Your health journey matters! Create your account to start booking appointments, accessing records, and managing your healthcare seamlessly.",
-                R.drawable.img3
+                R.drawable.img_6
         ));
         mList.add(new ScreenItem(
                 "Stay Connected",
                 "Enjoy real-time updates and communication with your doctor or healthcare provider, ensuring you stay informed at every step.",
-                R.drawable.connected
+                R.drawable.img_7
         ));
 
         mList.add(new ScreenItem(
                 "Get Started Today",
                 "Ready to experience the future of healthcare? Sign up or log in now to begin your journey with Assist Doc.",
-                R.drawable.rb_198
+                R.drawable.img_9
         ));
 
         // setup viewpager
