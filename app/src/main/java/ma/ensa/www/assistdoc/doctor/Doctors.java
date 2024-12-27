@@ -74,11 +74,11 @@ public class Doctors extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.nav_home:
-                    // startActivity(new Intent(Doctors.this, HomeActivity.class));
+                    startActivity(new Intent(Doctors.this, Doctors.class));
                     break;
 
                 case R.id.appointment:
-                    // startActivity(new Intent(Doctors.this, AppointmentActivity.class));
+                    startActivity(new Intent(Doctors.this, Doctors.class));
                     break;
                 case R.id.chats:
                     startActivity(new Intent(Doctors.this, Chat_Activity.class));

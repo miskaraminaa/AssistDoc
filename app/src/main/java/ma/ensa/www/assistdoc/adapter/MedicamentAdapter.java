@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ma.ensa.www.assistdoc.R;
-import ma.ensa.www.assistdoc.entities.Medicament;
+import ma.ensa.www.assistdoc.model.Medicament;
 
 public class MedicamentAdapter extends ArrayAdapter<Medicament> {
 

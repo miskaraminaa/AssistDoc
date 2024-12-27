@@ -108,9 +108,9 @@ public class Activity_SignUp extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 10 && resultCode == RESULT_OK && data != null) {
+        if (requestCode == 10 && resultCode == RESULT_OK && data != null) {   // correspond à l'action de sélection d'image (10).
             imageURI = data.getData();
-            rg_profileImg.setImageURI(imageURI);
+            rg_profileImg.setImageURI(imageURI);  // Met à jour la vue circulaire (rg_profileImg) pour afficher l'image sélectionnée.
         }
     }
 

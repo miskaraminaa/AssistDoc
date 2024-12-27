@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ma.ensa.www.assistdoc.R;
-import ma.ensa.www.assistdoc.entities.Medicament;
+import ma.ensa.www.assistdoc.model.Medicament;
 
 public class MedicationAdapter extends RecyclerView.Adapter<MedicationAdapter.MedicationViewHolder> implements Filterable {
 

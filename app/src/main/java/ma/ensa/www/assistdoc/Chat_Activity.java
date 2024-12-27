@@ -28,13 +28,14 @@ import ma.ensa.www.assistdoc.adapter.UserAdapter;
 import ma.ensa.www.assistdoc.model.Users;
 
 public class Chat_Activity extends AppCompatActivity {
+
     FirebaseAuth auth;
+    FirebaseDatabase database;
+
     RecyclerView mainUserRecyclerView;
     UserAdapter adapter;
-    FirebaseDatabase database;
     ArrayList<Users> usersArrayList;
     ImageView imglogout  ;
-    ImageView cumbut, setbut;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -51,7 +52,6 @@ public class Chat_Activity extends AppCompatActivity {
         // Initialize Firebase and UI components
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
-        cumbut = findViewById(R.id.camBut);
 
         DatabaseReference reference = database.getReference().child("user");
         usersArrayList = new ArrayList<>();
@@ -83,11 +83,7 @@ public class Chat_Activity extends AppCompatActivity {
             dialog.show();
         });
 
-        // Camera button handling
-        cumbut.setOnClickListener(v -> {
-            Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent, 10);
-        });
+
 
         // Check if the user is logged in
         if (auth.getCurrentUser() == null) {

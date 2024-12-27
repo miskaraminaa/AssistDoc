@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     tools:context=".doctor.Doctors"
     tools:openDrawer="end"
-    android:background="@color/white">
+    android:background="@color/lightPurple">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -50,9 +50,9 @@
             android:id="@+id/tv_patient_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Liste of Patients"
-            android:textSize="18sp"
-            android:textColor="@color/grey"
+            android:text="List of Patients"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Long Click for Appointment Details"
             android:textColor="@color/grey"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="10dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_patients"

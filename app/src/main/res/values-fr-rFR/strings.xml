@@ -57,11 +57,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="contact">contact</string>
     <string name="title_activity_map">Map</string>
-    <string name="doc_phone">Enter your phone number : +212 xxxxxxxxx</string>
-    <string name="doc_verif">Enter the code</string>
     <string name="next">NEXT</string>
     <string name="buttom_doc">SUBMIT</string>
-    <string name="didn_t_tget_otp_resend" translatable="false">didn\'t get The Code?<b>Resend</b></string>
 
 
 </resources>

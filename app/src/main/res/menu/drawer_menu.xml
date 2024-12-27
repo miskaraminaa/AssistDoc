@@ -16,14 +16,14 @@
 
         <item
             android:id="@+id/nav_sos"
-            android:icon="@drawable/ic_person1"
+            android:icon="@drawable/call"
             android:title="SOS Call"
             />
 
         <item
             android:id="@+id/nav_medication"
             android:icon="@drawable/medication_icon"
-            android:title="Prise de Médicaments" />
+            android:title="Medications" />
 
         <item
             android:id="@+id/chatbot"

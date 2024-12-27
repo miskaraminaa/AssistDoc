@@ -21,7 +21,7 @@ import java.util.Map;
 import ma.ensa.www.assistdoc.Chat_Activity;
 import ma.ensa.www.assistdoc.R;
 import ma.ensa.www.assistdoc.adapter.MedicamentAdapter; // Correct import
-import ma.ensa.www.assistdoc.entities.Medicament;
+import ma.ensa.www.assistdoc.model.Medicament;
 
 public class Medications_Activity extends AppCompatActivity {
 

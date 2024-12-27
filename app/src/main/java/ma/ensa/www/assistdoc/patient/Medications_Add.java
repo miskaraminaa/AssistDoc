@@ -22,7 +22,7 @@ import java.util.Calendar;
 
 import ma.ensa.www.assistdoc.Chat_Activity;
 import ma.ensa.www.assistdoc.R;
-import ma.ensa.www.assistdoc.entities.Medicament;
+import ma.ensa.www.assistdoc.model.Medicament;
 import ma.ensa.www.assistdoc.model.MedicationReminderReceiver;
 
 public class Medications_Add extends AppCompatActivity {

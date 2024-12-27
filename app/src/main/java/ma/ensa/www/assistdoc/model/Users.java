@@ -3,7 +3,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Users implements Parcelable {
-    String userId;  // Utilisez long si le userId est un nombre
+    String userId;
     String status;
     String userName;
     String email;
@@ -137,6 +137,7 @@ public class Users implements Parcelable {
     public void setType(String type) {
         this.type = type;
     }
+
 
     // Méthode writeToParcel pour écrire dans le Parcel
     @Override

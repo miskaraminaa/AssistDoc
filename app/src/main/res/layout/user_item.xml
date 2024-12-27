@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_8sdp"
-    android:background="@drawable/bordermain">
+    android:background="@drawable/bordermain2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:text="Name"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/userstatus"

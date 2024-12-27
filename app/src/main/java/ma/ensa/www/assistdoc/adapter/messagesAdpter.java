@@ -27,8 +27,10 @@ import ma.ensa.www.assistdoc.R;
 import ma.ensa.www.assistdoc.model.msgModelclass;
 
 public class messagesAdpter extends RecyclerView.Adapter {
+
     Context context;
     ArrayList<msgModelclass> messagesAdpterArrayList;
+
     int ITEM_SEND=1;
     int ITEM_RECIVE=2;
 
