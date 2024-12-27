@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/lightPurple"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".chatbot.MainActivity"
+    tools:ignore="ScrollViewCount">
+
+    <!-- Parent layout to group all children -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ConstraintLayout as part of grouped child -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/darkPurple"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:elevation="4dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/chat_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_chat"
+                    app:tint="@android:color/white" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- LinearLayout as part of grouped child -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Medical Assistant"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:hint="What do you want to know ? "
+                android:textStyle="italic"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="120dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="Send" />
+
+            <TextView
+                android:id="@+id/textView_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18dp"
+                android:textColor="@color/grey"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

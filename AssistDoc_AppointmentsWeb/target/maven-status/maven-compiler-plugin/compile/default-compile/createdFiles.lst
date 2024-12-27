@@ -1,0 +1,13 @@
+ma\ensa\assistdocapp\entities\Appointment.class
+ma\ensa\assistdocapp\AssistDocAppointments$WebConfig.class
+ma\ensa\assistdocapp\repositories\PersonRepository.class
+ma\ensa\assistdocapp\controller\ControllerClass.class
+ma\ensa\assistdocapp\repositories\CustomRepository.class
+ma\ensa\assistdocapp\entities\Doctor.class
+ma\ensa\assistdocapp\entities\AppointmentDelete.class
+ma\ensa\assistdocapp\AssistDocAppointments.class
+ma\ensa\assistdocapp\entities\Person.class
+ma\ensa\assistdocapp\repositories\AppointmentRepository.class
+ma\ensa\assistdocapp\repositories\CustomTwo.class
+ma\ensa\assistdocapp\service\AppointmentService.class
+ma\ensa\assistdocapp\repositories\DoctorRepository.class

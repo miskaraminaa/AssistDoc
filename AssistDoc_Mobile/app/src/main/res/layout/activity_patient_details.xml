@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/lightPurple">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/darkPurple"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:elevation="4dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/chat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:padding="8dp"
+                android:src="@drawable/ic_chat"
+                app:tint="@android:color/white" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Section: Add an Appointment -->
+        <TextView
+            android:id="@+id/tv_add_appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add an Appointment"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_appointment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Appointment Date"
+            android:focusable="false"
+            android:inputType="none"
+            android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <EditText
+            android:id="@+id/et_appointment_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Appointment Time"
+            android:focusable="false"
+            android:inputType="none"
+            android:drawableEnd="@android:drawable/ic_menu_recent_history"
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/et_doctor_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Doctor Notes"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_add_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Appointment"
+            android:backgroundTint="@color/accent_500"
+            />
+
+        <!-- List of Appointments -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List of Appointments"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/rc_rdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/_10sdp" />
+
+    </LinearLayout>
+</LinearLayout>

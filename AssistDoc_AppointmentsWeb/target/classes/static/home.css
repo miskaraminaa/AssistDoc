@@ -1,0 +1,35 @@
+body {
+  margin: 0; /* Remove margin on body */
+  padding: 0; /* Remove padding on body */
+  background: url('hx1.jpg') no-repeat center center fixed; /* Keep background fixed */
+  background-size: cover;
+  font-family: 'Poppins', sans-serif; /* Ensure consistent font */
+}
+header#home {
+  position: relative; /* Ensure header stays fixed relative to body */
+}
+.post-container {
+  margin: 20px 20px 20px 20px;
+  overflow: auto
+}
+.post-thumb {
+  float: left
+}
+
+.post-content {
+  margin-left: 800px;
+  margin-top: 150px
+}
+.post-title {
+  font-weight: bold;
+  font-size: 300%
+}
+.post-para {
+  font-size: 175%
+}
+.navbar {
+  position: fixed; /* Fixed position for the navbar */
+  width: 100%; /* Full width navbar */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust background color with transparency for the navbar */
+  z-index: 2000; /* Ensures navbar stays above content */
+}

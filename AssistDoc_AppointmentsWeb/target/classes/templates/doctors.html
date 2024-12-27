@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Appointment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('hx1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+    .card-wrapper {
+      max-width: 800px;
+      width: 100%;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .brand img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #b19cd9;
+      margin-bottom: 20px;
+    }
+    .btn {
+      width: 160px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: #b19cd9;
+      border: none;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #967bb6;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+    .header {
+      background: #b19cd9;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+    .options {
+      padding: 30px;
+    }
+    .options p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body >
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top "style="font-family: 'Poppins', sans-serif;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-capitalize" href="#"><img src="../img/7064996.jpg" width="40" height="40" alt="logo" loading="lazy" class="mr-2">Doctor's Appointment</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html"> <i class="fa fa-home mr-1" aria-hidden="true"></i>Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="appointed.html"><i class="fa fa-hospital-o mr-1" aria-hidden="true"></i>My Appointments</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="doctors.html"><i class="fa fa-medkit mr-1" aria-hidden="true"></i>Doctors<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html"><i class="fa fa-user mr-1" aria-hidden="true"></i>Book Appointment</a>
+            </li>
+            <button type="button" class="btn btn-outline btn-md btn-warning ml-4"><i class="fa fa-sign-out"></i>Logout</button>
+          </ul>
+        </div>
+      </nav>
+   </header> 
+   <section class="container.fluid pt-3">
+    <table class="table table-light table-hover">
+        <thead class="bg-primary">
+          <tr>
+            <th>Doctor ID</th>
+            <th>Doctor's Name</th>
+            <th>Specialization</th>
+            <th>&nbsp &nbsp &nbsp Slots Available Today</th>
+            <th>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Slots Booked</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+   </section>
+   <footer>
+       <p></p>
+   </footer>
+
+</body>
+</html>

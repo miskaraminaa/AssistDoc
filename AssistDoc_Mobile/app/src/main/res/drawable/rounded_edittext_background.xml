@@ -1,0 +1,15 @@
+
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#D8D7D7"/>  <!-- Couleur de fond -->
+
+    <corners android:radius="12dp"/>  <!-- Rayon des coins arrondis -->
+
+    <padding
+        android:left="12dp"
+        android:top="12dp"
+        android:right="12dp"
+        android:bottom="12dp"/>  <!-- Ajout d'un remplissage interne -->
+</shape>

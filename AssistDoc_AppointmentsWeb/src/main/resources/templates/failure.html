@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><style>
+    body {
+        background: url('hx1.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        color: #333;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+    }
+    .card-wrapper {
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .brand img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #b19cd9;
+        margin-bottom: 20px;
+    }
+    .btn {
+        width: 160px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px;
+        transition: all 0.3s;
+    }
+    .btn-primary {
+        background: #b19cd9;
+        border: none;
+        color: #fff;
+    }
+    .btn-primary:hover {
+        background: #967bb6;
+    }
+    .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+    }
+    .header {
+        background: #b19cd9;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+    }
+    .options {
+        padding: 30px;
+    }
+    .options p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+</style></head>
+<body>
+<h1>You do not exist in our database!<br>
+<td th:text="${person.email}">Name</td>
+</h1>
+</body>
+</html>
