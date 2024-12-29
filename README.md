@@ -141,33 +141,13 @@ Run the Spring Boot application. The database will be created automatically.
 Verify the backend is running at http://localhost:8000.
 ## **🎥 Video Demonstration**
 
-<table>
-  <tr>
-    <td>
-      <video width="400" controls>
-        <source src="
+
 Uploading PatientDemo.mp4…
- type="video/mp4">
-      </video>
-    </td>
-    <td>
-      <video width="400" controls>
-        <source src="
+
 https://github.com/user-attachments/assets/47901757-401b-4092-aa96-9e7eca531dbc
-" type="video/mp4">
-      </video>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <video width="400" controls>
-        <source src="
+
 https://github.com/user-attachments/assets/6ea51dfb-23f3-40b0-b7a7-b442314723cc
-" type="video/mp4">
-      </video>
-    </td>
-  </tr>
-</table>
+
 
 ## **🤝 Contributors**
 
