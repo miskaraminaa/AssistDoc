@@ -15,6 +15,10 @@
 	<description>Spring Boot Assist Doc Appointment Project</description>
 	<properties>
 		<java.version>17</java.version>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>Sonarqube_123</sonar.password>
+		<sonar.token>sqp_9841cc14e89629e1005eff36528b804d9dc50900</sonar.token>
+		<sonar.host.url>http://localhost:9002</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,7 +55,25 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>4.0.0.4121</version>
+			<!-- or the version you are using -->
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -59,6 +81,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.9.0.2155</version>
 			</plugin>
 		</plugins>
 	</build>

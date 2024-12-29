@@ -1,0 +1,6 @@
+projectKey=ma.ensaj:Appointment
+serverUrl=http://localhost:9002
+serverVersion=24.12.0.100206
+dashboardUrl=http://localhost:9002/dashboard?id=ma.ensaj%3AAppointment
+ceTaskId=8ad10746-f8d4-4d1b-8ffd-0d0b1e3c3f05
+ceTaskUrl=http://localhost:9002/api/ce/task?id=8ad10746-f8d4-4d1b-8ffd-0d0b1e3c3f05
