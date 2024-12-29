@@ -139,18 +139,25 @@ Start Apache and MySQL servers in XAMPP.
 Run the Spring Boot application. The database will be created automatically.
 
 Verify the backend is running at http://localhost:8000.
-
 ## **🎥 Video Demonstration**
 
+<div align="center">
+  <video width="400" controls>
+    <source src="https://github.com/user-attachments/assets/92cf50f5-7e19-4d2d-b04f-ee2823c367f9" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video width="400" controls>
+    <source src="https://github.com/user-attachments/assets/511d9385-e913-4702-b731-677d7b6fe517" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
-[![Vidéo 1](https://img.youtube.com/vi/92cf50f5-7e19-4d2d-b04f-ee2823c367f9/0.jpg)](https://github.com/user-attachments/assets/92cf50f5-7e19-4d2d-b04f-ee2823c367f9)  
-[![Vidéo 2](https://img.youtube.com/vi/511d9385-e913-4702-b731-677d7b6fe517/0.jpg)](https://github.com/user-attachments/assets/511d9385-e913-4702-b731-677d7b6fe517)
-
-
-
-https://github.com/user-attachments/assets/2765047c-711b-4d67-9d5e-a0d9fc006d90
-
-
+<div align="center">
+  <video width="400" controls>
+    <source src="https://github.com/user-attachments/assets/2765047c-711b-4d67-9d5e-a0d9fc006d90" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ## **🤝 Contributors**
 
