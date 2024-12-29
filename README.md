@@ -89,6 +89,7 @@ networks:
 
 ## 📱 Mobile
 - Firebase
+- Java
 
 ## 💻 Web
 - Springboot
@@ -114,9 +115,14 @@ Ensure MySQL is configured to use port 3306.
   cd <project_folder>
   ```
 - Add your API Key for AI Service.
-- You can login using the credentials:
-   - docteur :  miskaraminaa@gmail.com
-   - Patient :  marietekola@gmail.com
+- **You can log in using the following credentials:**
+  - **Doctor:**
+    - Email: `miskaraminaa@gmail.com`
+    - Password: `miskaramina`
+  - **Patient:**
+    - Email: `marietekola@gmail.com`
+    - Password: `marietekola`
+
 
 
 ## 💻 Web Setup
@@ -149,8 +155,7 @@ https://github.com/user-attachments/assets/47901757-401b-4092-aa96-9e7eca531dbc
 https://github.com/user-attachments/assets/6ea51dfb-23f3-40b0-b7a7-b442314723cc
 
 
-## **🤝 Contributors**
+## **🤝 Contributors**  
 
-MISKAR Amina  [github profile](https://github.com/miskaraminaa)
-
-EL ABIDI Aya  [github profile](https://github.com/yaelaya)
+- **MISKAR Amina** - [GitHub Profile](https://github.com/miskaraminaa)  
+- **EL ABIDI Aya** - [GitHub Profile](https://github.com/yaelaya)  
