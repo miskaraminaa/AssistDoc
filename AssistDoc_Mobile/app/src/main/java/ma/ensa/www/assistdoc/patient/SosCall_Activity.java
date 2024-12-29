@@ -22,7 +22,7 @@ import ma.ensa.www.assistdoc.R;
 public class SosCall_Activity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1;
     private EditText mEditTextNumber;
-    private ImageView chatIcon ;
+    private ImageView chatIcon , navHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,10 @@ public class SosCall_Activity extends AppCompatActivity {
             }
         });
 
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view ->
+                startActivity(new Intent(this, Patient_MainActivity.class))
+        );
 
 
     }

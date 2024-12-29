@@ -29,26 +29,24 @@
             android:id="@+id/chatbot"
             android:icon="@drawable/baseline_assistant_24"
             android:title="AI Assistant" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share_icon"
+            android:title="@string/menu_share" />
+        <item
+            android:id="@+id/nav_cntus"
+            android:icon="@drawable/contact_icon"
+            android:title="Contact Us" />
+
+
+        <!-- Ajout du item Logout -->
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout_icon"
+            android:title="Logout" />
     </group>
 
-    <item android:title="Communicate"
-    >
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/share_icon"
-                android:title="@string/menu_share" />
-            <item
-                android:id="@+id/nav_cntus"
-                android:icon="@drawable/contact_icon"
-                android:title="Contact Us" />
-        </menu>
-    </item>
 
 
-    <!-- Ajout du item Logout -->
-    <item
-        android:id="@+id/logout"
-        android:icon="@drawable/logout_icon"
-        android:title="Logout" />
 </menu>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:background="@color/lightPurple"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".chatbot.MainActivity"
     tools:ignore="ScrollViewCount">
 
@@ -28,7 +28,14 @@
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 android:elevation="4dp"
                 tools:ignore="MissingConstraints">
-
+                <ImageView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_home_24"
+                    app:tint="@android:color/white" />
                 <ImageView
                     android:id="@+id/chat_icon"
                     android:layout_width="wrap_content"
@@ -44,7 +51,7 @@
         <!-- LinearLayout as part of grouped child -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:padding="16dp"
             android:orientation="vertical">
@@ -53,16 +60,24 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Medical Assistant"
+                android:text="Your Medical Assistant !"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How do you feel today ? "
+                android:textColor="#E91E63"
+                android:textSize="24sp"
                 android:textStyle="bold|italic" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                android:hint="What do you want to know ? "
+                android:hint="What do you want to know ?"
                 android:textStyle="italic"
                 >
 
@@ -70,7 +85,8 @@
                     android:id="@+id/input_prompt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                   />
+                    android:textColor="#8A8888"
+                    android:textStyle="italic" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -86,8 +102,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:textSize="18dp"
-                android:textColor="@color/grey"/>
+                android:fontFamily="@font/bad_script"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16dp" />
 
             <ProgressBar
                 android:id="@+id/progressBar"

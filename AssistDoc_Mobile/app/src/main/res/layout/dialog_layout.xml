@@ -38,7 +38,7 @@
             android:gravity="center"
             android:text="No"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/teal_200"/>
 
         <Button
             android:id="@+id/yesbnt"
@@ -49,7 +49,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:text="Yes"
-            android:backgroundTint="@color/white"/>
+            android:backgroundTint="@color/accent_500"/>
 
     </LinearLayout>
 

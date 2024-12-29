@@ -1,6 +1,5 @@
 package ma.ensa.www.assistdoc.model;
 
-
 public class Medicament {
     private String userId;
     private String id;
@@ -17,7 +16,6 @@ public class Medicament {
     }
 
     public Medicament() {
-
     }
 
     // Getters and setters for each field

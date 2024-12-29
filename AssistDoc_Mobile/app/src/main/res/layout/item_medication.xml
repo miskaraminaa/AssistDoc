@@ -54,10 +54,10 @@
                     android:id="@+id/textViewHeurePris"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:text="Time of Intake"
-                    android:textSize="12sp"
                     android:textColor="#666666"
-                    android:layout_marginTop="4dp"/>
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/textViewFrequence"
@@ -76,7 +76,18 @@
                     android:textSize="12sp"
                     android:textColor="#666666"
                     android:layout_marginTop="4dp"/>
+
+
             </LinearLayout>
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="20dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Delete Medication"
+                android:src="@drawable/delete" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

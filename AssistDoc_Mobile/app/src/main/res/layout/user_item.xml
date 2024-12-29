@@ -5,44 +5,57 @@
     android:layout_margin="@dimen/_8sdp"
     android:background="@drawable/bordermain2">
 
+    <!-- Main Horizontal Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="13dp"
+            android:src="@drawable/pic" />
+        <!-- Profile Picture -->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userimg"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_margin="13dp"
-            android:src="@drawable/ic_camera"/>
+            android:src="@drawable/pic"
+            android:visibility="invisible"/>
+
+        <!-- User Info Section -->
+
+
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:gravity="center">
+            android:gravity="start">
 
+            <!-- User Name -->
             <TextView
                 android:id="@+id/username"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
 
+            <!-- User Status -->
             <TextView
                 android:id="@+id/userstatus"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Status"
                 android:textColor="@color/black"
-                android:textSize="10.40dp"
-                android:text="Status"/>
-
+                android:textSize="10.40dp" />
         </LinearLayout>
 
 
     </LinearLayout>
-
 </RelativeLayout>

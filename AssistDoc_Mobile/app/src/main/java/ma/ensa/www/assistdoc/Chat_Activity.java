@@ -36,6 +36,7 @@ public class Chat_Activity extends AppCompatActivity {
     UserAdapter adapter;
     ArrayList<Users> usersArrayList;
     ImageView imglogout  ;
+    ImageView navHome;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -83,6 +84,11 @@ public class Chat_Activity extends AppCompatActivity {
             dialog.show();
         });
 
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view -> {
+            // Revenir à l'écran précédent
+            finish();
+        });
 
 
         // Check if the user is logged in

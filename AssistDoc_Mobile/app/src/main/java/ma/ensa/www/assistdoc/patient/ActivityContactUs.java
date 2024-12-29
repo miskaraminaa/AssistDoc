@@ -14,10 +14,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ma.ensa.www.assistdoc.Chat_Activity;
 import ma.ensa.www.assistdoc.R;
 
 
 public class ActivityContactUs extends AppCompatActivity {
+
+    private ImageView chatIcon , navHome;
 
     TextView t1;
     TextView t2;
@@ -39,6 +42,15 @@ public class ActivityContactUs extends AppCompatActivity {
         i1 = findViewById(R.id.final_call);
         i2 = findViewById(R.id.final_mail);
         i3 = findViewById(R.id.final_map);
+
+        chatIcon = findViewById(R.id.chat_icon);
+        chatIcon.setOnClickListener(view ->
+                startActivity(new Intent(this, Chat_Activity.class))
+        );
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view ->
+                startActivity(new Intent(this, Patient_MainActivity.class))
+        );
 
         final String num = "8980688666";
         t1.setOnClickListener(new View.OnClickListener() {

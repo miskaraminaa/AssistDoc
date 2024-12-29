@@ -7,31 +7,34 @@
     tools:context=".Chat_Windo"
     android:background="@color/lightPurple">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkPurple"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:elevation="4dp"
         tools:ignore="MissingConstraints">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/darkPurple"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            android:elevation="4dp"
-            tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:padding="8dp"
+            android:src="@drawable/baseline_home_24"
+            app:tint="@android:color/white" />
 
-            <ImageView
-                android:id="@+id/chat_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:padding="8dp"
-                android:src="@drawable/ic_chat"
-                app:tint="@android:color/white" />
-        </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:id="@+id/logoutimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:padding="8dp"
+            android:src="@drawable/logout_icon"
+            app:tint="@android:color/white" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <ImageView
@@ -68,10 +71,11 @@
             android:id="@+id/recivername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="25dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp"
-            android:layout_margin="@dimen/_10sdp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -80,8 +84,8 @@
         android:layout_height="502dp"
         android:layout_above="@id/ll2"
         android:layout_below="@+id/ll1"
-        android:layout_marginTop="87dp"
-        android:layout_marginBottom="-81dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginBottom="27dp"
         android:padding="@dimen/_10sdp" />
 
     <LinearLayout

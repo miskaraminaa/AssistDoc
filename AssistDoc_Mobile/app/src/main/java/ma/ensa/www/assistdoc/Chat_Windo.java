@@ -1,8 +1,10 @@
 package ma.ensa.www.assistdoc;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,11 +41,12 @@ public class Chat_Windo extends AppCompatActivity {
     TextView reciverNName;
     FirebaseDatabase database;
     FirebaseAuth firebaseAuth;
+
     public static String senderImg;
     public static String reciverIImg;
     CardView sendbtn;
     EditText textmsg;
-    ImageView chatIcon;
+    private ImageView imglogout , navHome;
     String senderRoom, reciverRoom;
     RecyclerView messageAdpter;
     ArrayList<msgModelclass> messagesArrayList;
@@ -60,12 +63,29 @@ public class Chat_Windo extends AppCompatActivity {
             actionBar.hide();
         }
 
-        // Initialisation des composants de l'interface utilisateur
-        chatIcon = findViewById(R.id.chat_icon);
-        chatIcon.setOnClickListener(view ->
-                startActivity(new Intent(this, Chat_Activity.class)) // Redirection vers Chat_Activity
-        );
 
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view -> {
+            // Revenir à l'écran précédent
+            finish();
+        });
+        // Logout button handling
+        imglogout = findViewById(R.id.logoutimg);
+        imglogout.setOnClickListener(v -> {
+            Dialog dialog = new Dialog(this, R.style.dialoge);
+            dialog.setContentView(R.layout.dialog_layout);
+            Button no, yes;
+            yes = dialog.findViewById(R.id.yesbnt);
+            no = dialog.findViewById(R.id.nobnt);
+            yes.setOnClickListener(v1 -> {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(this, AskRole.class);
+                startActivity(intent);
+                finish();
+            });
+            no.setOnClickListener(v12 -> dialog.dismiss());
+            dialog.show();
+        });
         // Initialisation de Firebase et de l'authentification
         database = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();

@@ -30,7 +30,7 @@ public class Medications_Add extends AppCompatActivity {
     private Button buttonAdd, buttonViewMeds;
     private FirebaseAuth mAuth;
     private DatabaseReference dbRef;
-    private ImageView chatIcon ;
+    private ImageView chatIcon , navHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,11 @@ public class Medications_Add extends AppCompatActivity {
         chatIcon.setOnClickListener(view ->
                 startActivity(new Intent(this, Chat_Activity.class))
         );
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view ->
+                startActivity(new Intent(this, Patient_MainActivity.class))
+        );
+
         mAuth = FirebaseAuth.getInstance();
         dbRef = FirebaseDatabase.getInstance().getReference("medications");
 
@@ -66,7 +71,13 @@ public class Medications_Add extends AppCompatActivity {
             if (mAuth.getCurrentUser() != null) {
                 String userId = mAuth.getCurrentUser().getUid();
 
-                dbRef.child(userId).push().setValue(medicament)
+                // Add the medication and set the ID
+                DatabaseReference newMedicationRef = dbRef.child(userId).push();
+                String medicamentId = newMedicationRef.getKey();  // Get the generated ID
+
+                medicament.setId(medicamentId);  // Set the ID in the medicament object
+
+                newMedicationRef.setValue(medicament)
                         .addOnSuccessListener(aVoid -> {
                             Toast.makeText(Medications_Add.this, "Medication well added!", Toast.LENGTH_SHORT).show();
                             scheduleMedicationReminders(medicament);

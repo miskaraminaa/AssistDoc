@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewAnswer, inputPrompt;
     private Button buttonSend;
     private ProgressBar progressBar;
-    private ImageView chatIcon ;
+    private ImageView chatIcon , navHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         chatIcon.setOnClickListener(view ->
                 startActivity(new Intent(this, Chat_Activity.class))
         );
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view ->
+                startActivity(new Intent(this, Patient_MainActivity.class)) // Redirection vers Chat_Activity
+        );
+
 
         buttonSend.setOnClickListener(v -> {
             String query = inputPrompt.getText().toString();

@@ -36,7 +36,7 @@ import ma.ensa.www.assistdoc.model.Appointment;
 public class PatientDetailsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private ImageView chatIcon;
+    private ImageView chatIcon , navHome;
 
     private DatabaseReference appointmentsRef;
     FirebaseDatabase database;
@@ -93,7 +93,7 @@ public class PatientDetailsActivity extends AppCompatActivity {
             String notes = etDoctorNotes.getText().toString();
 
             if (date.isEmpty() || time.isEmpty() || notes.isEmpty()) {
-                Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Fill all fields !", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -162,13 +162,15 @@ public class PatientDetailsActivity extends AppCompatActivity {
         List<String> appointmentStrings = new ArrayList<>();
         for (Appointment appointment : rdvList) {
             appointmentStrings.add(
-                    "Patient: " + appointment.getPatientName() +
-                            "\nDate: " + appointment.getDate() +
-                            "\nTime: " + appointment.getTime()+
-                            "\nNotes: " + appointment.getDoctorNotes()+
-                            "\n-------------------------------------------- "
+                    "\n " +
+                    "👤 Patient: " + appointment.getPatientName() +
+                            "\n📅 Date: " + appointment.getDate() +
+                            "\n⏰ Time: " + appointment.getTime() +
+                            "\n📝 Notes: " + appointment.getDoctorNotes() +
+                            "\n "
             );
         }
+
 
         // Create an ArrayAdapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, appointmentStrings);
@@ -177,24 +179,27 @@ public class PatientDetailsActivity extends AppCompatActivity {
         rc_rdv.setAdapter(adapter);
     }
 
-    @SuppressLint("QueryPermiswsionsNeeded")
+    @SuppressLint("QueryPermissionsNeeded")
     private void sendEmail() {
         // Email details
         String[] recipients = {reciverEmail}; // Replace with actual recipient email(s)
 
-        String body = "Dear " + reciverName+",\n\n" +
-                "This is a reminder about your upcoming appointment:\n\n" +
-                "Date: "+etAppointmentDate.getText().toString() + "\n"+
-                "Time: "+etAppointmentTime.getText().toString() + "\n\n"+
-                "Please bring your insurance documents with you, if available.\n\n" +
-                "Best regards,";
+        // Constructing a professional email body
+        String body = "Dear " + reciverName + ",\n\n" +
+                "We are writing to remind you about your upcoming appointment with AssistDoc. Below are the details of your appointment:\n\n" +
+                "Date: " + etAppointmentDate.getText().toString() + "\n" +
+                "Time: " + etAppointmentTime.getText().toString() + "\n\n" +
+                "Please ensure to bring any relevant documents, including your insurance information, if applicable.\n\n" +
+                "If you have any questions or need to reschedule, please do not hesitate to contact us.\n\n" +
+                "Best regards,\n" +
+                "AssistDoc Team";
 
         // Create the intent
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto","abc@mail.com", null));
+                "mailto", "abc@mail.com", null));
         intent.setData(Uri.parse("mailto:")); // Use mailto scheme
         intent.putExtra(Intent.EXTRA_EMAIL, recipients);
-        intent.putExtra(Intent.EXTRA_SUBJECT, "AssistDoc_appointment");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Appointment Reminder from AssistDoc");
         intent.putExtra(Intent.EXTRA_TEXT, body);
 
         // Verify there is an email app to handle the intent

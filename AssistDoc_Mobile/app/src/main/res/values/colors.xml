@@ -9,6 +9,9 @@
     <color name="red">#FFF50606</color>
     <color name="blue">#0267FF</color>
     <color name="blue2">#1B73F8</color>
+    <color name="colorSurface">#FFFFFF</color> <!-- Light background color for the dialog surface -->
+    <color name="colorOnSurface">#000000</color> <!-- Text color on the surface -->
+
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>

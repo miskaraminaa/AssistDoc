@@ -31,7 +31,8 @@ public class Patient_MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     EditText nametext;
     EditText agetext;
-    private ImageView enter,enterr, chatIcon;
+    private ImageView enter;
+    private ImageView chatIcon , navHome;
     RadioButton male;
     RadioButton female;
     RadioGroup rg;
@@ -61,6 +62,8 @@ public class Patient_MainActivity extends AppCompatActivity {
         chatIcon.setOnClickListener(view ->
                 startActivity(new Intent(Patient_MainActivity.this, Chat_Activity.class))
         );
+
+
 
         enter.setOnClickListener(new View.OnClickListener() {
             @Override

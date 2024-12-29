@@ -5,6 +5,11 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-34/data/res/layout/simple_list_item_1.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ask_role.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -120,11 +125,6 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/nav_menu.xml">
-        <config>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/reciver_layout.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -150,6 +150,11 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/patient_menu.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
@@ -171,7 +176,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Administrateur\.android\avd\Pixel_8a_API_35_1.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Administrateur\.android\avd\Pixel_8_API_35_2.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -188,22 +193,22 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AssistDoc1" type="f1a62948:ProjectNode" />
+                <item name="AssistDoc_Mobile" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AssistDoc1" type="f1a62948:ProjectNode" />
+                <item name="AssistDoc_Mobile" type="f1a62948:ProjectNode" />
                 <item name="app" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AssistDoc1" type="f1a62948:ProjectNode" />
+                <item name="AssistDoc_Mobile" type="f1a62948:ProjectNode" />
                 <item name="app" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AssistDoc1" type="f1a62948:ProjectNode" />
+                <item name="AssistDoc_Mobile" type="f1a62948:ProjectNode" />
                 <item name="app" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
@@ -269,8 +274,8 @@
     "com.google.services.firebase.aqiPopupShown": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrateur/Desktop/AssistDoc/AssistDoc_Mobile",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/AssistDoc/AssistDoc_Mobile/app/src/main/res/menu",
+    "settings.editor.selected.configurable": "device.mirroring"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -279,16 +284,17 @@
       <recent name="ma.ensa.www.assistdoc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrateur\Desktop\AssistDoc\AssistDoc_Mobile\app\src\main\res\menu" />
       <recent name="C:\Users\Administrateur\Desktop\AssistDoc\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Downloads\AssistDoc1\AssistDoc1\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Desktop\AssistDoc1\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Desktop\AssistDoc1\app\src\main\res" />
-      <recent name="C:\Users\Administrateur\Desktop\AssistDoc1\app\src\main\res\layout" />
     </key>
     <key name="android.template.-1519814270">
       <recent name="ma.ensa.www.assistdoc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrateur\Desktop\AssistDoc\AssistDoc_Mobile\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Desktop\AssistDoc\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Downloads\AssistDoc1\AssistDoc1\app\src\main\res\drawable" />
       <recent name="C:\Users\Administrateur\Downloads\AssistDoc1\AssistDoc1\app\src\main\res\layout" />

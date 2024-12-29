@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -59,33 +59,38 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder> {
 
         holder.itemView.setOnLongClickListener(v -> {
 
-            // Create the AlertDialog
-            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+            // Create the modern Material AlertDialog
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(mContext, R.style.dialoge);
 
-            builder.setTitle("Patient Informations") // Set the title
-                    .setMessage("All to know about your patient") // Set the message
-                    .setPositiveButton("See appointment details", (dialog, which) -> {
+            // Optional: You can set a custom layout for the dialog if you want a completely custom look
+            // builder.setView(R.layout.custom_dialog_layout); // Uncomment this to use a custom layout
+
+            builder.setTitle("Patient Information") // Set the title
+                    .setMessage("Here is all you need to know about your patient.") // Set the message
+                    .setIcon(R.drawable.ic_person1) // Optional: Add an icon
+                    .setPositiveButton("See Appointment Details", (dialog, which) -> {
                         Intent intent = new Intent(mContext, PatientDetailsActivity.class);
-                        intent.putExtra("nameeee",users.getUsername());
-                        intent.putExtra("reciverImg",users.getProfilepic());
-                        intent.putExtra("mail",users.getEmail());
-                        intent.putExtra("uid",users.getUserId());
+                        intent.putExtra("nameeee", users.getUsername());
+                        intent.putExtra("reciverImg", users.getProfilepic());
+                        intent.putExtra("mail", users.getEmail());
+                        intent.putExtra("uid", users.getUserId());
                         mContext.startActivity(intent);
                         dialog.dismiss();
                     })
                     .setNeutralButton("See Medicament Details", (dialog, which) -> {
                         Intent intent = new Intent(mContext, Medications_Activity.class);
-                        intent.putExtra("uid",users.getUserId());
+                        intent.putExtra("uid", users.getUserId());
                         mContext.startActivity(intent);
                         dialog.dismiss();
-                    });
+                    })
+                    .setCancelable(true);  // Allow dialog to be canceled when tapping outside
 
             // Show the dialog
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            builder.show();
 
             return false;
         });
+
 
     }
 
@@ -107,4 +112,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.viewholder> {
             userstatus = itemView.findViewById(R.id.userstatus);
         }
     }
+
+    // Add an update method in your adapter
+    public void updateList(ArrayList<Users> newUsersList) {
+        usersArrayList.clear();  // Clear the old list
+        usersArrayList.addAll(newUsersList);  // Add the new list
+        notifyDataSetChanged();  // Notify the adapter that the data has changed
+    }
+
 }

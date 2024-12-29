@@ -1,15 +1,15 @@
 package ma.ensa.www.assistdoc.doctor;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;  // Correct import
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -36,168 +36,179 @@ public class Doctors extends AppCompatActivity {
     private Toolbar toolbar;
     private ImageView chatIcon;
 
-    FirebaseAuth auth;
-    RecyclerView mainUserRecyclerView;
-    UserAdapter adapter;
-    FirebaseDatabase database;
-    ArrayList<Users> usersArrayList;
+    private FirebaseAuth auth;
+    private RecyclerView mainUserRecyclerView;
+    private UserAdapter adapter;
+    private FirebaseDatabase database;
+    private ArrayList<Users> usersArrayList;
 
-
-    @SuppressLint({"MissingInflatedId", "CutPasteId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors);
 
+        initializeUI();
+        setupToolbar();
+        setupNavigationDrawer();
+        setupChatIcon();
+
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        usersArrayList = new ArrayList<>();
+
+        mainUserRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new UserAdapter(this, usersArrayList);
+        mainUserRecyclerView.setAdapter(adapter);
+
+        String currentUserId = (auth.getCurrentUser() != null) ? auth.getCurrentUser().getUid() : null;
+        if (currentUserId != null) {
+            Log.d("DoctorsActivity", "Current User ID: " + currentUserId);
+            checkUserRoleAndFetchData(currentUserId);
+        } else {
+            Log.e("DoctorsActivity", "No authenticated user.");
+            finish(); // End activity if no authenticated user is found
+        }
+
+        setupSearchView();
+    }
+
+    private void initializeUI() {
         drawerLayout = findViewById(R.id.draw_activity);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
         chatIcon = findViewById(R.id.chat_icon);
+        mainUserRecyclerView = findViewById(R.id.rc_patients);
+    }
 
-        // Set up the toolbar
-        setSupportActionBar(toolbar);  // This works with androidx.appcompat.widget.Toolbar
-        chatIcon = findViewById(R.id.chat_icon);
-        if (chatIcon != null) {
-            chatIcon.setOnClickListener(view -> startActivity(new Intent(this, Chat_Activity.class)));
-        } else {
-            Log.e("Chat_Activity", "chatIcon not found!");
-        }
+    private void setupToolbar() {
+        setSupportActionBar(toolbar);
+    }
 
-        // Récupérer l'ID de l'utilisateur actuellement authentifié
-        String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        Log.d("Doctors", "Current User ID: " + currentUserId);
-
-        // Handle navigation item clicks
+    private void setupNavigationDrawer() {
         navigationView.setNavigationItemSelectedListener(item -> {
-            // Close the drawer after an item is selected
             drawerLayout.closeDrawer(GravityCompat.START);
-
             switch (item.getItemId()) {
                 case R.id.nav_home:
                     startActivity(new Intent(Doctors.this, Doctors.class));
                     break;
-
                 case R.id.appointment:
-                    startActivity(new Intent(Doctors.this, Doctors.class));
+                    startActivity(new Intent(Doctors.this, PatientDetailsActivity.class));
                     break;
                 case R.id.chats:
                     startActivity(new Intent(Doctors.this, Chat_Activity.class));
                     break;
-
                 case R.id.logout:
-                    // Handle logout logic (e.g., clear session or token)
+                    auth.signOut();
                     startActivity(new Intent(Doctors.this, SignIn_Doctor.class));
                     finish();
                     break;
-
                 default:
                     return false;
             }
             return true;
         });
+    }
 
-        // Initialize Firebase and UI components
-        database = FirebaseDatabase.getInstance();
-        auth = FirebaseAuth.getInstance();
+    private void setupChatIcon() {
+        if (chatIcon != null) {
+            chatIcon.setOnClickListener(view -> startActivity(new Intent(this, Chat_Activity.class)));
+        } else {
+            Log.e("DoctorsActivity", "Chat icon not found.");
+        }
+    }
 
-        DatabaseReference reference = database.getReference().child("user");
-        usersArrayList = new ArrayList<>();
+    private void setupSearchView() {
+        SearchView searchView = findViewById(R.id.search_button);
+        if (searchView != null) {
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    filterPatients(query);
+                    return true;
+                }
 
-        mainUserRecyclerView = findViewById(R.id.rc_patients);
-        mainUserRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new UserAdapter(Doctors.this, usersArrayList);
-        mainUserRecyclerView.setAdapter(adapter);
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    filterPatients(newText);
+                    return true;
+                }
+            });
+        }
+    }
 
-        checkUserRoleAndFetchData(currentUserId);
-
+    private void filterPatients(String query) {
+        ArrayList<Users> filteredList = new ArrayList<>();
+        for (Users user : usersArrayList) {
+            if (user.getUsername() != null && user.getUsername().toLowerCase().contains(query.toLowerCase())) {
+                filteredList.add(user);
+            }
+        }
+        adapter.updateList(filteredList);
     }
 
     private void checkUserRoleAndFetchData(String userId) {
-        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference().child("user");
+        DatabaseReference usersRef = database.getReference("user");
         usersRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    String status = dataSnapshot.child("status").getValue(String.class);
-
-                    if ("DOCTOR".equals(status)) {
-                        // If the current user is a doctor, fetch all patients
-                        fetchPatients();
-                    } else {
-                        // If the current user is not a doctor, fetch the unique doctor
-                        fetchDoctor();
-                    }
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String status = dataSnapshot.child("status").getValue(String.class);
+                if ("DOCTOR".equalsIgnoreCase(status)) {
+                    fetchPatients();
                 } else {
-                    Log.e("Doctors", "Utilisateur non trouvé.");
+                    fetchDoctor();
                 }
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.e("Doctors", "Erreur de récupération des données utilisateur: " + databaseError.getMessage());
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("DoctorsActivity", "Failed to fetch user data: " + error.getMessage());
             }
         });
     }
 
     private void fetchPatients() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("user");
-        usersArrayList.clear(); // Clear the list before adding new data
-
-        // Fetch all patients for doctors
+        DatabaseReference reference = database.getReference("user");
+        usersArrayList.clear();
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Users user = dataSnapshot.getValue(Users.class);
-
-                    if (user != null) {
-                        String status = dataSnapshot.child("status").getValue(String.class);
-                        if ("PATIENT".equals(status)) {
-                            usersArrayList.add(user); // Add patient to the list
-                        }
+                    if (user != null && "PATIENT".equalsIgnoreCase(dataSnapshot.child("status").getValue(String.class))) {
+                        usersArrayList.add(user);
                     }
                 }
-
-                // Notify the adapter that the data has changed
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle errors here
                 Toast.makeText(Doctors.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void fetchDoctor() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("user");
-        usersArrayList.clear(); // Clear the list before adding the doctor
-
-        // Fetch the doctor (since there should only be one in the database)
+        DatabaseReference reference = database.getReference("user");
+        usersArrayList.clear();
         reference.orderByChild("status").equalTo("DOCTOR").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Users doctor = dataSnapshot.getValue(Users.class);
                     if (doctor != null) {
-                        usersArrayList.add(doctor); // Add the doctor to the list
+                        usersArrayList.add(doctor);
                     }
                 }
-
-                // Notify the adapter that the data has changed
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Handle errors here
                 Toast.makeText(Doctors.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-
-
 
     @Override
     public void onBackPressed() {

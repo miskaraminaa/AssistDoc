@@ -12,8 +12,6 @@
     android:background="@color/lightPurple">
 
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -24,10 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/darkPurple"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             tools:ignore="MissingConstraints">
-
 
 
             <ImageView
@@ -43,17 +40,18 @@
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Do you want to check your disease ? "
-            android:textColor="@color/grey"
+            android:layout_marginTop="20dp"
             android:gravity="center"
+            android:text="Do you want to check your disease ? "
+            android:textAlignment="center"
+            android:textColor="@color/grey"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-            app:layout_constraintTop_toTopOf="@id/nametext"
-            app:layout_constraintVertical_bias="0.526"
-            tools:layout_editor_absoluteX="55dp"
-            tools:ignore="MissingConstraints" />
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
         <EditText
             android:id="@+id/nametext"
@@ -70,10 +68,10 @@
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintHorizontal_bias="0.294"
             app:layout_constraintStart_toStartOf="@+id/toolbar"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.693"
+            app:layout_constraintVertical_bias="0.714"
             tools:ignore="Autofill,HardcodedText" />
 
         <EditText
@@ -91,21 +89,21 @@
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.582"
+            app:layout_constraintHorizontal_bias="0.314"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.775" />
+            app:layout_constraintVertical_bias="0.799" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="78dp"
-            android:layout_height="59dp"
+            android:layout_width="84dp"
+            android:layout_height="97dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.912"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0.976"
+            app:layout_constraintVertical_bias="0.825"
             app:srcCompat="@drawable/enter1" />
 
         <RadioGroup
@@ -116,10 +114,10 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintHorizontal_bias="0.294"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.864">
+            app:layout_constraintVertical_bias="0.89">
 
             <RadioButton
                 android:id="@+id/male"
@@ -160,33 +158,33 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="133dp"
-            android:layout_height="286dp"
+            android:layout_width="199dp"
+            android:layout_height="362dp"
             android:layout_marginStart="50dp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintHorizontal_bias="0.345"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0.339"
+            app:layout_constraintVertical_bias="0.043"
             app:srcCompat="@drawable/women" />
 
         <TextView
             android:id="@+id/welcomeTextView"
             android:layout_width="362dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="332dp"
+            android:background="@drawable/bordermain2"
             android:fontFamily="serif"
             android:gravity="center"
-            android:text="Welcome to AssistDoc, your trusted companion for healthcare needs!"
+            android:text=" ⭐Welcome to AssistDoc, your trusted companion for healthcare needs!⭐"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="@id/imageView8"
-            app:layout_constraintEnd_toEndOf="@id/toolbar"
-
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/toolbar" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -202,8 +200,5 @@
         app:itemTextColor="@color/black"
         android:backgroundTint="@color/white"
         tools:ignore="MissingConstraints" />
-
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

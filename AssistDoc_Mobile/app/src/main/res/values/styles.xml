@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorSurface">@color/colorSurface</item> <!-- Ensure this is defined -->
 
         <!-- Disable the default action bar -->
         <item name="windowActionBar">false</item>
@@ -21,7 +22,7 @@
         <item name="colorPrimary">@color/black</item>
     </style>
 
-    <style name="dialoge">
+    <style name="dialoge" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/empty_background</item>
         <item name="windowNoTitle">true</item>
         <item name="windowMinWidthMajor">80%</item>
@@ -52,6 +53,7 @@
 
 
 </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

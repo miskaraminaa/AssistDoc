@@ -1,19 +1,14 @@
 package ma.ensa.www.assistdoc;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
+
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-
-import java.util.Locale;
-
 import ma.ensa.www.assistdoc.doctor.SignIn_Doctor;
 
 

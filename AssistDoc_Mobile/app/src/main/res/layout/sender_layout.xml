@@ -25,6 +25,7 @@
         android:layout_marginStart="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginRight="0dp"
         android:layout_marginBottom="@dimen/_5sdp"
         android:layout_toLeftOf="@id/profilerggg"
         android:background="@drawable/sender_shape"

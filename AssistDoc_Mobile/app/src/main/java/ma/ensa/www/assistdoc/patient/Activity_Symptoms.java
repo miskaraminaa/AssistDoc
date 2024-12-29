@@ -21,7 +21,7 @@ public class Activity_Symptoms extends AppCompatActivity {
     Button dis;
     Spinner s1, s2, s3, s4, s5, s6, s7;
     String d[] = new String[7];
-    ImageView chatIcon ;
+    private ImageView chatIcon , navHome;
     // Diseases and their respective symptoms
     Map<String, String[]> diseases = new HashMap<String, String[]>() {{
         put("Diarrhoea", new String[]{"Stomach Ache", "Nausea", "Vomiting", "Fever", "Sudden Weight Loss"});
@@ -41,6 +41,11 @@ public class Activity_Symptoms extends AppCompatActivity {
         chatIcon.setOnClickListener(view ->
                 startActivity(new Intent(this, Chat_Activity.class))
         );
+        navHome = findViewById(R.id.nav_home);
+        navHome.setOnClickListener(view ->
+                startActivity(new Intent(this, Patient_MainActivity.class))
+        );
+
         s1 = findViewById(R.id.syp1);
         s2 = findViewById(R.id.syp2);
         s3 = findViewById(R.id.syp3);

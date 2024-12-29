@@ -24,14 +24,7 @@
             android:elevation="4dp"
             tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/chat_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:padding="8dp"
-                android:src="@drawable/ic_chat"
-                app:tint="@android:color/white" />
+
         </androidx.appcompat.widget.Toolbar>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -39,7 +32,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_56sdp"
+        android:layout_marginTop="45dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="16dp"
@@ -48,25 +41,44 @@
         <!-- Section: Liste des patients -->
         <TextView
             android:id="@+id/tv_patient_list"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="List of Patients"
+            android:text="MEET PETIENTS  "
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="34sp"
             android:textStyle="bold" />
-
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="🥼🩺🏥"
+            android:textAlignment="center"
+            android:textSize="30dp"
+ />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:text="Long Click for Appointment Details"
-            android:textColor="@color/grey"
-            android:layout_marginBottom="10dp"/>
+            android:textAlignment="center"
+            android:textColor="@color/grey" />
+
+
+        <SearchView
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search for a patient"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_patients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/user_item" />
+            tools:listitem="@layout/user_item"
+            />
 
     </LinearLayout>
 
