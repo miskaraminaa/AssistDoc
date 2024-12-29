@@ -140,7 +140,16 @@ Run the Spring Boot application. The database will be created automatically.
 Verify the backend is running at http://localhost:8000.
 
 ## **🎥 Video Demonstration**
-Videooo
+
+
+
+
+https://github.com/user-attachments/assets/92cf50f5-7e19-4d2d-b04f-ee2823c367f9
+
+
+
+https://github.com/user-attachments/assets/511d9385-e913-4702-b731-677d7b6fe517
+
 
 ## **🤝 Contributors**
 
