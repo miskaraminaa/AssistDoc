@@ -145,19 +145,25 @@ Verify the backend is running at http://localhost:8000.
   <tr>
     <td>
       <video width="400" controls>
-        <source src="https://github.com/user-attachments/assets/92cf50f5-7e19-4d2d-b04f-ee2823c367f9" type="video/mp4">
+        <source src="
+Uploading PatientDemo.mp4…
+ type="video/mp4">
       </video>
     </td>
     <td>
       <video width="400" controls>
-        <source src="https://github.com/user-attachments/assets/511d9385-e913-4702-b731-677d7b6fe517" type="video/mp4">
+        <source src="
+https://github.com/user-attachments/assets/47901757-401b-4092-aa96-9e7eca531dbc
+" type="video/mp4">
       </video>
     </td>
   </tr>
   <tr>
     <td colspan="2">
       <video width="400" controls>
-        <source src="https://github.com/user-attachments/assets/2765047c-711b-4d67-9d5e-a0d9fc006d90" type="video/mp4">
+        <source src="
+https://github.com/user-attachments/assets/6ea51dfb-23f3-40b0-b7a7-b442314723cc
+" type="video/mp4">
       </video>
     </td>
   </tr>
