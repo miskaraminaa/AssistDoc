@@ -1,4 +1,4 @@
-# **Assist Doc: Bridging the Gap in Digital Healthcare Communication and Management**
+# **📄 Assist Doc: Bridging the Gap in 💻 Digital Healthcare 🩺 Communication and Management**
 
 ![AssistDoc](https://github.com/user-attachments/assets/2b746858-0b13-45e4-b6de-f16ebac2e897)
 
