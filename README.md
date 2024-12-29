@@ -26,12 +26,12 @@ system, organize and track appointments, and monitor patient medication adherenc
 
 ---
 
-## 🛠️ Software Architecture
+## **🛠️ Software Architecture**
 ![diagram-export-25-12-2024-22_31_57](https://github.com/user-attachments/assets/9869cc95-157d-46df-a89c-b9499177dc4f)
 
 ---
 
-## 🐳 Docker Image
+## **🐳 Docker Image**
 
 ```yaml
 services:
@@ -66,9 +66,9 @@ networks:
 ```
 
 
-## 🎨 Frontend
+## **🎨 Frontend**
 
-## **📱 Mobile Features**
+## 📱 Mobile Features
 - Built with Java.
 - Includes features such as:
      - Appointment Making with patient.📅
@@ -78,22 +78,22 @@ networks:
      - Emergy call 📞
      - Integrated chat system for patient interactions 💬
 
-## **💻 Web Technologies**
+## 💻 Web Technologies
 - HTML
 - CSS
 - JavaScript
 - Bootstrap
 
-## ⚙️ Backend 
+## **⚙️ Backend**
 
-**📱 Mobile**
+## 📱 Mobile
 - Firebase
 
-**💻 Web**
+## 💻 Web
 - Springboot
 - MySQL
 
-## 🚀 Getting Started
+## **🚀 Getting Started**
 **Prerequisites**
 
 - Install Git
@@ -106,7 +106,7 @@ Start the Apache and MySQL servers.
 
 Ensure MySQL is configured to use port 3306.
 
-**📱 Mobile Setup**
+## 📱 Mobile Setup
 - Clone the Project
   ```
   git clone <repository_url>
@@ -118,7 +118,7 @@ Ensure MySQL is configured to use port 3306.
    - Patient :  marietekola@gmail.com
 
 
-**💻 Web Setup**
+## 💻 Web Setup
 
 - Clone the Project
   ```
@@ -139,10 +139,10 @@ Run the Spring Boot application. The database will be created automatically.
 
 Verify the backend is running at http://localhost:8000.
 
-## 🎥 Video Demonstration
+## **🎥 Video Demonstration**
 Videooo
 
-## 🤝 Contributors
+## **🤝 Contributors**
 
 MISKAR Amina  [github profile](https://github.com/miskaraminaa)
 
