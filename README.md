@@ -1,6 +1,6 @@
 # **Assist Doc: Bridging the Gap in Digital Healthcare Communication and Management**
 
-![WhatsApp Image 2024-12-24 at 12 08 33](https://github.com/user-attachments/assets/5fe41324-f6d0-4e2e-9801-c009b9079841)
+![AssistDoc](https://github.com/user-attachments/assets/2b746858-0b13-45e4-b6de-f16ebac2e897)
 
 Assist Doc is an advanced medical application developed to enhance communication between patients and
 healthcare professionals, thereby improving health management and accessibility. The app provides patients
@@ -147,8 +147,12 @@ Verify the backend is running at http://localhost:8000.
 https://github.com/user-attachments/assets/92cf50f5-7e19-4d2d-b04f-ee2823c367f9
 
 
-
 https://github.com/user-attachments/assets/511d9385-e913-4702-b731-677d7b6fe517
+
+
+
+https://github.com/user-attachments/assets/2765047c-711b-4d67-9d5e-a0d9fc006d90
+
 
 
 ## **🤝 Contributors**
