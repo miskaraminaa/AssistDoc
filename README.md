@@ -68,7 +68,7 @@ networks:
 
 ## 🎨 Frontend
 
-**📱 Mobile Features**
+## **📱 Mobile Features**
 - Built with Java.
 - Includes features such as:
      - Appointment Making with patient.📅
@@ -78,7 +78,7 @@ networks:
      - Emergy call 📞
      - Integrated chat system for patient interactions 💬
 
-**💻 Web Technologies**
+## **💻 Web Technologies**
 - HTML
 - CSS
 - JavaScript
