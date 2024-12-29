@@ -2,12 +2,13 @@
 
 ![AssistDoc](https://github.com/user-attachments/assets/2b746858-0b13-45e4-b6de-f16ebac2e897)
 
-Assist Doc is an advanced medical application developed to enhance communication between patients and
+
+_Assist Doc is an advanced medical application developed to enhance communication between patients and
 healthcare professionals, thereby improving health management and accessibility. The app provides patients
 with features such as medication scheduling with reminders, symptom tracking for disease suggestions, browser
 redirection for detailed health information, direct calls to healthcare providers, and locating nearby hospitals. For
 healthcare professionals, the application offers tools to manage patient interactions through an integrated chat
-system, organize and track appointments, and monitor patient medication adherence.
+system, organize and track appointments, and monitor patient medication adherence._
 
 ## 📚**Table of Contents**
 - [🛠️ Software Architecture](#-software-architecture)
