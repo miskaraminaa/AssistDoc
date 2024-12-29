@@ -1,6 +1,6 @@
 # **Assist Doc: Bridging the Gap in Digital Healthcare Communication and Management**
 
-![WhatsApp Image 2024-12-24 at 12 08 33](https://github.com/user-attachments/assets/5fe41324-f6d0-4e2e-9801-c009b9079841)
+![Capture d'écran 2024-12-27 155537](https://github.com/user-attachments/assets/67e0083d-dfd4-44fc-923f-d31527e32ff8)
 
 Assist Doc is an advanced medical application developed to enhance communication between patients and
 healthcare professionals, thereby improving health management and accessibility. The app provides patients
